@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Books } from './Books';
+import books from './books.jpg';
+import { BooksEnd } from './BooksEnd';
+import booksTwo from './booksTwo.jpg';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <div>
+        <h1>Книги для чтения в феврале</h1>
+      </div>
+
+      <div className='listOfBooks'>
+        <div>
+          <h2>Прочитать обязательно</h2>
+          <Books />
+        </div>
+        <div className='capture'>
+          <img src={ books } alt="books" width="400px" />
+        </div>
+      </div>
+
+      <div className='listOfBooks'>
+        <div className='capture'>
+          <img src={ booksTwo } alt="booksTwo" width="400px" />
+        </div>
+        <div>
+          <h2>Прочитать дополнительно</h2>
+          <BooksEnd />
+        </div>
+      </div>
+
     </div>
   );
 }
