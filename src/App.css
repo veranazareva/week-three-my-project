@@ -25,10 +25,13 @@ h2 {
 
 .listOfBooks {
   display: flex;
+  flex-direction: column;
   padding: 1%;
 }
 
 .capture {
+  display: flex;
+  justify-content: center;
   padding: 1%;
 }
 
@@ -45,6 +48,7 @@ ul, li {
   margin-top: 15px;
   background-color: rgb(191, 243, 109);
   font-family: 'Lora', serif;
+  width: 50%;
 }
 
 .btnDelete {
@@ -56,4 +60,13 @@ input {
   padding: 5px;
   font-family: 'Lora', serif;
   font-size: 15px;
+}
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-size: 20px;
+  }
+  .App {
+    width: 100%;
+  }
 }
